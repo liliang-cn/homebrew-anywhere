@@ -1,8 +1,8 @@
 class Anywhered < Formula
   desc "Daemon that runs and controls AI coding agents for the anywhere app"
   homepage "https://github.com/liliang-cn/anywhere"
-  url "https://github.com/liliang-cn/anywhere/archive/refs/tags/v0.1.7.tar.gz"
-  sha256 "7c9e74ebd3ecba20c8b413fc8f22320e33eb58dc62658502f3984258cff0c53d"
+  url "https://github.com/liliang-cn/anywhere/archive/refs/tags/v0.1.8.tar.gz"
+  sha256 "6739a4b02c3699214f01caadf0cc2e72648d2621c1c3d6b0e8a3ee33d52a309b"
   license "MIT"
   head "https://github.com/liliang-cn/anywhere.git", branch: "main"
 
