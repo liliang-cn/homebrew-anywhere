@@ -1,27 +1,27 @@
 class Anywhered < Formula
   desc "Daemon that runs and controls AI coding agents for the anywhere app"
   homepage "https://github.com/liliang-cn/anywhere"
-  version "0.1.12"
+  version "0.1.13"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/liliang-cn/anywhere/releases/download/v0.1.12/anywhered-0.1.12-darwin-arm64.tar.gz"
-      sha256 "3724956f20edd50f0ff23ce445353e55724f1bafe07bd3e6f9dab13b97fc60ca"
+      url "https://github.com/liliang-cn/anywhere/releases/download/v0.1.13/anywhered-0.1.13-darwin-arm64.tar.gz"
+      sha256 "aa54b86429a2e1aa913c9da4190095269e4d50477c24d02cf3dade596984603a"
     end
     on_intel do
-      url "https://github.com/liliang-cn/anywhere/releases/download/v0.1.12/anywhered-0.1.12-darwin-amd64.tar.gz"
-      sha256 "eb9f1d70029f045b7ebd4add4a4273d9389f88fd0b61775dc52266250f7bd2fd"
+      url "https://github.com/liliang-cn/anywhere/releases/download/v0.1.13/anywhered-0.1.13-darwin-amd64.tar.gz"
+      sha256 "a73fa457ab3ef0beb78e87f9c6f1f37b219020bdbd1a5f4a09fea67edc8ed1a9"
     end
   end
   on_linux do
     on_arm do
-      url "https://github.com/liliang-cn/anywhere/releases/download/v0.1.12/anywhered-0.1.12-linux-arm64.tar.gz"
-      sha256 "bb92cf95f4f8106e0e97cf7800114ef2f934ebe2d6bf50c00701dc5f7f539744"
+      url "https://github.com/liliang-cn/anywhere/releases/download/v0.1.13/anywhered-0.1.13-linux-arm64.tar.gz"
+      sha256 "89875c4ae235ecf425d50273e8a08136cf3bdb900398cb070bfd6afae8144ea3"
     end
     on_intel do
-      url "https://github.com/liliang-cn/anywhere/releases/download/v0.1.12/anywhered-0.1.12-linux-amd64.tar.gz"
-      sha256 "d7e795f23900e6394ce92d5e235c242b31b56e9a95d4dbbf8c1408b252349edf"
+      url "https://github.com/liliang-cn/anywhere/releases/download/v0.1.13/anywhered-0.1.13-linux-amd64.tar.gz"
+      sha256 "46dfd744fc902c482420163b03663fba30baaa66b20ea6d3f136a3a88d9be6d7"
     end
   end
 
