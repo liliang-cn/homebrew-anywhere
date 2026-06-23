@@ -1,18 +1,32 @@
 class Anywhered < Formula
   desc "Daemon that runs and controls AI coding agents for the anywhere app"
   homepage "https://github.com/liliang-cn/anywhere"
-  url "https://github.com/liliang-cn/anywhere/archive/refs/tags/v0.1.10.tar.gz"
-  sha256 "cb47f853960d33faa31362db15eeda713c01f1d2c1cfe3ff933fd12a81e19741"
+  version "0.1.10"
   license "MIT"
-  head "https://github.com/liliang-cn/anywhere.git", branch: "main"
 
-  depends_on "go" => :build
+  on_macos do
+    on_arm do
+      url "https://github.com/liliang-cn/anywhere/releases/download/v0.1.10/anywhered-0.1.10-darwin-arm64.tar.gz"
+      sha256 "f891c791586b2b7c055ddc3fa3665675dbd394fd0fba22543894bcf7667d6ea1"
+    end
+    on_intel do
+      url "https://github.com/liliang-cn/anywhere/releases/download/v0.1.10/anywhered-0.1.10-darwin-amd64.tar.gz"
+      sha256 "449354b97e71aa6faab566fe46658285c5d08e0cbfee7cb7cc8f0df4771e8b44"
+    end
+  end
+  on_linux do
+    on_arm do
+      url "https://github.com/liliang-cn/anywhere/releases/download/v0.1.10/anywhered-0.1.10-linux-arm64.tar.gz"
+      sha256 "cb29862b02d459fdf4f541597c308161b1a5aba6a66f455f66f8bf40a5d5d45b"
+    end
+    on_intel do
+      url "https://github.com/liliang-cn/anywhere/releases/download/v0.1.10/anywhered-0.1.10-linux-amd64.tar.gz"
+      sha256 "79089b631c7b4b3b355143566dad2023a0bea8aee0a2cb958bdf6fb70ee70a47"
+    end
+  end
 
   def install
-    cd "anywhered" do
-      system "go", "build", "-trimpath", "-ldflags", "-s -w",
-             "-o", bin/"anywhered", "./cmd/anywhered"
-    end
+    bin.install "anywhered"
   end
 
   def caveats
