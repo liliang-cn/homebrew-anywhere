@@ -1,27 +1,27 @@
 class Anywhered < Formula
-  desc "Daemon that runs and controls AI coding agents for the anywhere app"
-  homepage "https://github.com/liliang-cn/anywhere"
+  desc "Daemon that runs and controls AI coding agents for the Anywhere app"
+  homepage "https://github.com/liliang-cn/anywhered"
   version "0.1.18"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/liliang-cn/anywhere/releases/download/v0.1.18/anywhered-0.1.18-darwin-arm64.tar.gz"
-      sha256 "1683ba8392f19bf2e7c4d75bd7a33475a64488c93b931d751d9f28d484943245"
+      url "https://github.com/liliang-cn/anywhered/releases/download/v0.1.18/anywhered-0.1.18-darwin-arm64.tar.gz"
+      sha256 "4690aa47137d16bfb130c67c6a4507b7236edd44486245d57f2430ef134707a8"
     end
     on_intel do
-      url "https://github.com/liliang-cn/anywhere/releases/download/v0.1.18/anywhered-0.1.18-darwin-amd64.tar.gz"
-      sha256 "9d7d51d11f226d8c11b0b89896f14b75e1284067710e834c35142089904e2522"
+      url "https://github.com/liliang-cn/anywhered/releases/download/v0.1.18/anywhered-0.1.18-darwin-amd64.tar.gz"
+      sha256 "0605b4c8f9a8097113127df0381c590b3ffe6accb71673f64f9e4d68be3cd2f0"
     end
   end
   on_linux do
     on_arm do
-      url "https://github.com/liliang-cn/anywhere/releases/download/v0.1.18/anywhered-0.1.18-linux-arm64.tar.gz"
-      sha256 "c98b8154eddde7287f8949ea8ffdd3b3d1be26fe87dc3be27f3fad0a750f7845"
+      url "https://github.com/liliang-cn/anywhered/releases/download/v0.1.18/anywhered-0.1.18-linux-arm64.tar.gz"
+      sha256 "63c19fce33ba8d0dcd7e7d66381a12034b0599622dc12018309a3be318cbe2ea"
     end
     on_intel do
-      url "https://github.com/liliang-cn/anywhere/releases/download/v0.1.18/anywhered-0.1.18-linux-amd64.tar.gz"
-      sha256 "c1c4f14cc8d4a8ff959ec6163b740a41ec15f4e401936f8af62117d1b9de8088"
+      url "https://github.com/liliang-cn/anywhered/releases/download/v0.1.18/anywhered-0.1.18-linux-amd64.tar.gz"
+      sha256 "74f4591de36c1517df264c65cc4788fa812762ad7ca9586498821cc52d41a199"
     end
   end
 
@@ -35,8 +35,6 @@ class Anywhered < Formula
         anywhered
       Keep it always on (start at boot + auto-restart):
         anywhered service install
-      Run in the background ad-hoc:
-        anywhered start | status | stop
       Pair the app:   anywhered pair | pair -6 | pair -ts
       Inbox hooks:    anywhered install-hooks
     CAVEAT
