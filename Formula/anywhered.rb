@@ -1,45 +1,31 @@
 class Anywhered < Formula
   desc "Daemon that runs and controls AI coding agents for the Anywhere app"
   homepage "https://github.com/liliang-cn/anywhered"
-  version "0.1.18"
+  version "0.1.19"
   license "MIT"
-
   on_macos do
     on_arm do
-      url "https://github.com/liliang-cn/anywhered/releases/download/v0.1.18/anywhered-0.1.18-darwin-arm64.tar.gz"
-      sha256 "4690aa47137d16bfb130c67c6a4507b7236edd44486245d57f2430ef134707a8"
+      url "https://github.com/liliang-cn/anywhered/releases/download/v0.1.19/anywhered-0.1.19-darwin-arm64.tar.gz"
+      sha256 "f6e29e0670779798227c1b07264a10a0ffe0d15a73d56c13791bc97dab84a0a6"
     end
     on_intel do
-      url "https://github.com/liliang-cn/anywhered/releases/download/v0.1.18/anywhered-0.1.18-darwin-amd64.tar.gz"
-      sha256 "0605b4c8f9a8097113127df0381c590b3ffe6accb71673f64f9e4d68be3cd2f0"
+      url "https://github.com/liliang-cn/anywhered/releases/download/v0.1.19/anywhered-0.1.19-darwin-amd64.tar.gz"
+      sha256 "d801fc776f956d906afa067d07485b6d8a6b9994d99375f79b3530fe6653a193"
     end
   end
   on_linux do
     on_arm do
-      url "https://github.com/liliang-cn/anywhered/releases/download/v0.1.18/anywhered-0.1.18-linux-arm64.tar.gz"
-      sha256 "63c19fce33ba8d0dcd7e7d66381a12034b0599622dc12018309a3be318cbe2ea"
+      url "https://github.com/liliang-cn/anywhered/releases/download/v0.1.19/anywhered-0.1.19-linux-arm64.tar.gz"
+      sha256 "613f2b3536a5d56eb9538830636d1b837a29265a15c1a2b88fb08cc1c15a92a1"
     end
     on_intel do
-      url "https://github.com/liliang-cn/anywhered/releases/download/v0.1.18/anywhered-0.1.18-linux-amd64.tar.gz"
-      sha256 "74f4591de36c1517df264c65cc4788fa812762ad7ca9586498821cc52d41a199"
+      url "https://github.com/liliang-cn/anywhered/releases/download/v0.1.19/anywhered-0.1.19-linux-amd64.tar.gz"
+      sha256 "26332d0a0a69eb099eafe978406ac4c62576bbbc160f2cd65819d4f52e71c4fa"
     end
   end
-
   def install
     bin.install "anywhered"
   end
-
-  def caveats
-    <<~CAVEAT
-      Start the daemon (binds 0.0.0.0:47823, prints a pairing QR):
-        anywhered
-      Keep it always on (start at boot + auto-restart):
-        anywhered service install
-      Pair the app:   anywhered pair | pair -6 | pair -ts
-      Inbox hooks:    anywhered install-hooks
-    CAVEAT
-  end
-
   test do
     assert_match "anywhere", shell_output("#{bin}/anywhered pair 2>&1")
   end
